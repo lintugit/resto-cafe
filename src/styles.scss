@@ -1,0 +1,249 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    display: block;
+    overflow: hidden !important;
+    overflow-y: auto !important;
+    background-color: #fff;
+  }
+  
+  .page-content {
+    padding: 16px;
+  }
+  
+  .mat-list {
+    .mat-list-item {
+      .mat-list-item-content {
+  
+        .mat-list-text:empty,
+        .mat-list-text:blank {
+          display: none;
+        }
+  
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .mat-tab-label, .mat-tab-link {
+    color: #d55270
+    ;
+  }
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #d55270;
+}
+p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1c1a1a;
+}
+
+.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{
+  display: none !important;
+}
+
+.mat-tab-label:not(.mat-tab-label-active){
+  color: #333;
+  opacity: 1;
+}
+
+.mat-toolbar.mat-primary {
+  background: rgb(255 255 255 / 70%);
+  color: #8c8d8f;
+}
+
+.mat-tab-label,
+.mat-tab-link {
+  color: #e91e63;
+}
+
+#rcorners1 {
+  border-radius: 25px;
+  background: #4baf4f;
+  padding: initial;
+  width: auto;
+  height: auto;
+  font-size: inherit;
+  color: white;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: inline-block;
+}
+
+#card-content {
+  color: #aaabad;
+}
+
+.mat-card {
+  background: #42424203;
+  color: #1c1a1a;
+}
+
+.mat-card-subtitle {
+  color: rgb(28 26 33);
+  font: bold;
+}
+
+.toolbar-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -10px;
+  margin-right: -10px;
+  .d-column {
+    padding: 10px;
+    .share-icon{
+margin-right: 15px;
+    }
+  }
+}
+
+.mat-card-list {
+  box-shadow: none !important;
+  border-radius: 0;
+  padding: 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+  .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+    .d-column {
+      padding: 20px;
+
+    }
+  }
+  .mat-card-header {
+    flex-direction: column;
+    .mat-card-header-text {
+      margin-left: 0;
+      margin-right: 0;
+      .mat-card-title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0;
+
+        img {
+          display: block;
+          width: 32px;
+          height: 32px;
+          object-fit: contain;
+          margin-right: 20px;
+        }
+
+        h4 {
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .mat-card-actions{
+    .counter{
+      margin-bottom: 15px;
+    }
+    .text-warning{
+      color: #e91e63;
+      margin-bottom: 0;
+    }
+  }
+
+}
+  .mat-menu-sm{
+    .mat-list{
+      &.mat-list-base{
+        padding-top: 0;
+        .mat-list-item {
+          height: auto;
+          .mat-list-item-content{
+            padding-top: 5px;
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+  
+  }
+  
+  
+  .mat-card{
+    &.no-record{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+      &.height-fix{
+        min-height: 50vh;
+      }
+      &>p{
+        font-size: 20px;
+      
+      }
+    }
+    .mat-header-with-action{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #f1f1f1;
+      padding-bottom: 8px;
+      margin-bottom: 20px !important;
+      .mat-header-title{
+        font-size: 18px;
+        line-height: 20px;
+      }
+      .mat-card-toolbar, .mat-header-title{
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+      .mat-card-toolbar{
+        max-width:40%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    table {
+      width: 100%;
+    }
+    
+    th.mat-sort-header-sorted {
+      color: black;
+    }
+  }
+  
+  table {
+    width: 100%;
+  }
+  .mat-snack-bar-container{
+    .mat-simple-snackbar{
+      .mat-simple-snackbar-action{
+        .mat-button{
+          line-height: inherit;
+          color: #fff;
+          padding: 8px 8px;
+        }
+      }
+    }
+    &.mat-primary{
+      .mat-simple-snackbar{
+        .mat-simple-snackbar-action{
+          .mat-button{
+            color: rgba(0, 0, 0, 0.87);
+          }
+        }
+      }
+    }
+  
+  }
+  

@@ -1,0 +1,61 @@
+
+<mat-toolbar-row color="primary">
+  <div class="d-flex toolbar-flex">
+    <div class="d-column">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+      <b>{{restoDetails.restaurant_name}}</b>
+    </div>
+    <div class="d-column">
+      <button mat-button class="orders-icon" aria-label="orders-button">My Orders</button>
+      <button mat-icon-button class="share-icon" aria-label="share icon">
+        <mat-icon matBadge="{{cartList.length}}" matBadgeColor="warn">shopping_cart</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar-row>
+
+
+<mat-tab-group dynamicHeight>
+  <mat-tab *ngFor="let item of restoDetails.table_menu_list" label="{{item.menu_category}}">
+    <mat-card *ngFor="let value of item.category_dishes" class="mat-card-list">
+      <div class="d-flex">
+        <div class="d-column">
+          <mat-card-header>
+            <mat-card-title> <img src="./assets/img/veg.ico" *ngIf="value.dish_Type==2">
+              <img src="./assets/img/nonveg.ico" *ngIf="value.dish_Type==1">
+              <h4>{{value.dish_name}}</h4>
+            </mat-card-title>
+            <div class="d-flex">
+              <div class="d-column"><p><b>{{value.dish_currency}} {{value.dish_price}}</b></p></div>
+              <div class="d-column"><p style="text-align:right"><b>{{value.dish_calories}} calories</b></p></div>
+            </div>
+          </mat-card-header>
+          <mat-card-content id="card-content">
+            <p>{{value.dish_description}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="counter" id="rcorners1"><button mat-icon-button class="example-icon"
+                aria-label="Example icon-button with menu icon" (click)="removeToCart(value)">
+                <mat-icon>remove</mat-icon>
+              </button>
+              <span> {{ getCount(value) }} </span>
+              <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+                (click)="addToCart(value)">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+            <p class="text-warning" *ngIf="value.addonCat.length">Customizations available</p>
+          </mat-card-actions>
+        </div> 
+        <div class="d-column">
+          <img src="./assets/img/foodavatar.jpeg" style= "padding-bottom: 14em;" height="80px" width="80px">
+        </div>
+      </div>
+     
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>
+
+<router-outlet></router-outlet>
